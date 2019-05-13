@@ -1,7 +1,3 @@
-
-var score=0, scoreCall=0;
-
-
 // Enemies our player must avoid
 var Enemy = function(x,y,speed) {
     this.x=x;
@@ -52,9 +48,7 @@ Player.prototype.render=function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
+// All enemy objects in an array called allEnemies
 var allEnemies=[];
 
 var enemies=[60,145,225];
@@ -63,6 +57,7 @@ for (var i in enemies) {
   allEnemies.push(enemyPlayer);
 }
 
+// player object in a variable called player
 var player=new Player(200,407);
 
 // This listens for key presses and sends the keys to your
