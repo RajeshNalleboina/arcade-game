@@ -1,3 +1,4 @@
+"use strict";
 // Enemies our player must avoid
 var Enemy = function(x,y,speed) {
     this.x=x;
@@ -53,7 +54,7 @@ var allEnemies=[];
 
 var enemies=[60,145,225];
 for (var i in enemies) {
-  enemyPlayer=new Enemy(0,enemies[i],147);
+  var enemyPlayer=new Enemy(0,enemies[i],147);
   allEnemies.push(enemyPlayer);
 }
 
@@ -93,10 +94,11 @@ Player.prototype.handleInput=function(key){
 
   }
   if (this.y<60) {
-    scoreCall=setTimeout(()=>{
+    setTimeout(()=>{
+      alert("GameOver");
       this.x=200;
       this.y=407;
-    }, 200);
+    }, 1000);
   }
 }
 
